@@ -1,0 +1,38 @@
+@mixin light {
+    --color-mode: "light";
+    --color-bg: #{$light-color-bg};
+    --color-primary: #{$light-color-primary};
+    --color-secondary: #{$light-color-secondary};
+    --color-font: #{$light-color-font};
+    --color-headline: #{$light-color-headline};
+    --color-highlight: #{$light-color-highlight};
+}
+
+@mixin dark {
+    --color-mode: "dark";
+    --color-bg: #{$dark-color-bg};
+    --color-primary: #{$dark-color-primary};
+    --color-secondary: #{$dark-color-secondary};
+    --color-font: #{$dark-color-font};
+    --color-headline: #{$dark-color-headline};
+    --color-highlight: #{$dark-color-highlight};
+}
+
+//If auto we always use light theme
+body[data-theme='auto'] {
+    @include light();
+  
+    @media (prefers-color-scheme: dark) {
+      @include dark();
+    }
+  }
+
+//include light theme
+body[data-theme='light'] {
+    @include light();
+}
+
+//include dark theme
+body[data-theme='dark'] {
+    @include dark();
+}

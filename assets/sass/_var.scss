@@ -1,0 +1,62 @@
+//Color Sets for light and dark theme
+// Use specific color in SASS like color: var(--color-headline);
+
+$light-color-bg: #ffffff;
+$light-color-primary:#A9A9A9;
+$light-color-secondary: #EEEEEE;
+$light-color-font: #696969;
+$light-color-headline: #000000;
+$light-color-title: #ffffff;
+$light-color-highlight: #359377;
+
+
+$dark-color-bg: rgba(33, 33, 33, 1.0);
+$dark-color-primary:#A9A9A9;
+$dark-color-secondary: #696969;
+$dark-color-font: #EEEEEE;
+$dark-color-headline: #000000;
+$dark-color-title: #000000;
+$dark-color-highlight: #359377;
+
+
+
+$grey-0:          #EEEEEE; // HTML White Smoke
+$grey-1:          #D3D3D3; // HTML Light Grey
+$grey-2:          #A9A9A9; // HTML Dark Grey
+$grey-3:          #808080; // HTML Grey
+
+//Bootstrap Color Theme - Set Bootstrap Default values if not set in config.toml
+$primary:   #000000;
+$secondary: #6c757d;
+$light:     #f8f9fa;
+$dark:      #343a40;
+
+
+//FONTS
+@font-face{
+  font-family: 'Merriweather R';
+  src: url("../fonts/Merriweather/Merriweather-Regular.ttf") format('truetype');
+}
+
+@font-face{
+    font-family: 'Merriweather L';
+    src: url("../fonts/Merriweather/Merriweather-Light.ttf") format('truetype');
+  }
+
+
+@font-face{
+    font-family: 'Montserrat M';
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format('truetype');
+  }
+
+
+$font-standard: 'Merriweather L';
+$font-headlines: 'Montserrat M';
+
+
+$font-size-0: 0.5rem; 
+$font-size-1: 0.75rem; 
+$font-size-2: 1rem;
+$font-size-3: 1.25rem; 
+$font-size-4: 1.5rem;
+$font-size-5: 2rem;
