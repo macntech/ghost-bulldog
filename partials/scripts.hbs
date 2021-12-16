@@ -1,0 +1,55 @@
+    <script src="{{asset "js/jquery.min.js"}}"></script>
+    <script src="{{asset "js/popper.min.js"}}"></script>
+    <script src="{{asset "js/bootstrap.min.js"}}"></script>
+    <script src="{{asset "js/scripts.js"}}"></script>
+    <script src="{{asset "js/sticky.min.js"}}"></script>
+    <script src="{{asset "js/prism.js"}}"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+
+ {{!-- Modal for Settings --}}
+<script>
+
+MicroModal.init({
+    openTrigger: 'data-custom-open', // [3]
+    closeTrigger: 'data-custom-close', // [4]
+    disableScroll: true, // [5]
+    disableFocus: false, // [6]
+    awaitCloseAnimation: false, // [7]
+    debugMode: true // [8]
+  });
+
+var button = document.querySelector('.settings');
+button.addEventListener('click', function(){
+  MicroModal.show('modal-1');    
+});
+
+</script>
+
+
+    {{!-- Theme --}}
+<script>
+    //Get the local theme 
+    const localTheme = localStorage.getItem("bulldog_data-theme");
+    
+    //Set local theme if already selected - for coming back users
+    if (localTheme !== null) {
+        document.body.setAttribute('data-theme', localTheme);        
+    }
+    else{
+        document.body.setAttribute('data-theme', theme);
+    }
+
+    //Initialize the sticky class
+    var sticky = new Sticky('.sticky');
+</script>
+
+  {{!-- Load Projects --}}
+<script>
+        var bodyString = '';
+        $.each(projects, function(key, project) {
+            bodyString += ('<div class="row mt-2 border-bottom"><div class="col-md-4 mb-2"><div class="index-post-meta"><i class="post-date">['+project.name+']</i></div></div><div class="col-md-8 mb-2"><h4><a href="'+project.url+'" target="_blank" class="link-dark">'+project.description+'</a></h4></div></div>')
+            });
+        $('.projectlist').html(bodyString);
+</script>

@@ -1,0 +1,25 @@
+{{#if isSecondary}}
+    
+         {{!-- Styling for Social Links using Fontawesome  --}}
+        {{#foreach navigation}}
+
+             
+        
+        {{/foreach}}
+
+{{else}}
+   
+    {{!--  Main Navigation --}}
+    <div class="main-menu">
+         <nav>                  
+            <ul class="menu-list">
+                    {{#foreach navigation}}
+                        <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+                    {{/foreach}}
+              
+                        <li><a href="#" class="settings" data-micromodal-trigger="modal-1"><i class="fas fa-sliders-h"></i></a></li>
+              </ul>
+              
+        </nav>
+    </div>
+{{/if}}

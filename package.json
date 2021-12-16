@@ -1,33 +1,38 @@
 {
   "name": "bulldog",
-  "description": "A custom Ghost theme",
-  "version": "0.0.1",
+  "description": "A simple ghost theme with british charme",
+  "version": "1.0.0",
   "engines": {
-    "ghost": ">=3.0.0",
+    "ghost": ">=4.0.0",
     "ghost-api": "v3"
   },
   "license": "gpl-3.0",
   "author": {
     "name": "Johannes Geisslinger",
     "email": "jo@macn.tech",
-    "url": "https://macn.tech"
+    "url": "https://macandtech.com"
   },
   "gpm": {
     "type": "theme",
     "categories": [
       "Minimal",
-      "Magazine",
-      "Blog"
+      "Blog",
+      "bootstrap",
+      "projects"
     ]
   },
   "keywords": [
     "ghost",
     "theme",
     "ghost-theme",
-    "Geekinsta"
+    "british",
+    "blog",
+    "coding",
+    "projects",
+    "dark mode"
   ],
   "config": {
-    "posts_per_page": 10,
+    "posts_per_page": 5,
     "image_sizes": {}
   }
 }

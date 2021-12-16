@@ -1,9 +1,16 @@
-
+//Variables
 @import "./var.scss";
 
 //Bootstrap
 @import "./bootstrap/bootstrap.scss";
 
+//General Theme Styles
+@import "./layouts/typo.scss";
+@import "./layouts/navigation.scss";
+@import "./layouts/posts.scss";
 
 @import "./layouts/theme.scss";
 @import "./layouts/style.scss";
+
+//Custom styles loaded last
+@import "./custom.scss";

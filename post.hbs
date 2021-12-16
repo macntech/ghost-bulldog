@@ -4,8 +4,39 @@
 {{!-- Everything inside the #post tags pulls data from the POST --}}
 {{#post}}
 
+<div class="post">
+
+<h1>{{title}}</h1>
+<section class="post-meta">
+      Posted on
+      <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+        {{date format="DD MMMM YYYY"}}
+      </time>
+</section>
 
 
+<section class="post-content justify resizable">
+    
+    {{content}}
+
+</section>
+
+<section class="post-footer">
+<hr>
+  <div class="post-footer-tags">
+      {{tags prefix="Categories: "}}
+  </div>
+  <div class="post-footer-socials">
+    {{> socialshare}}
+  </div>
+<hr>
+  <div class="post-footer-newsletter">
+
+  </div>
+
+</section>
 
 
 {{/post}}
+
+</div>

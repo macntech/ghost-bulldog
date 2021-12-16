@@ -6,6 +6,7 @@
     --color-font: #{$light-color-font};
     --color-headline: #{$light-color-headline};
     --color-highlight: #{$light-color-highlight};
+    --color-link-hover: #{$light-color-link-hover};
 }
 
 @mixin dark {
@@ -16,6 +17,7 @@
     --color-font: #{$dark-color-font};
     --color-headline: #{$dark-color-headline};
     --color-highlight: #{$dark-color-highlight};
+    --color-link-hover: #{$dark-color-highlight};
 }
 
 //If auto we always use light theme

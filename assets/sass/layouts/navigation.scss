@@ -1,0 +1,195 @@
+/*
+*  BULLDOG Navigation Styles
+*/
+
+
+.main-menu .sub-menu {
+    padding-left: 0;
+    padding-right: 20px;
+    right: 100%;
+    left: auto;
+    text-align: right;
+}
+  
+.main-menu {
+    font-family: $font-standard-ns;
+    line-height: 1.5rem;
+    font-size: $font-size-2;
+}
+
+.main-menu ul,
+.main-menu li {
+    list-style: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu .menu-list > li > a {
+    padding-right: 25px;
+    color: var(--color-highlight);
+}
+
+
+
+.main-menu a {
+  color: var(--color-highlight);
+  text-underline-offset: 0.5em;
+}
+
+.main-menu a:hover{
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+  color: var(--color-link-hover);
+
+}
+
+.main-menu li {
+    position: relative;
+}
+
+  
+
+  .socials {
+    padding-top: 50px;
+  }
+
+  .socials a {
+    margin-right: 8px;
+    font-size: 1.5rem;
+  }
+  
+  .fontcontroller {
+      
+  }
+  
+  .fontcontroller a{
+    cursor: pointer;
+  }
+
+.kofi {
+ margin-bottom: 25px;
+}
+
+.navigation-wrap {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .navigation-wrap:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+  .navigation-wrap a {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    background-color: #cccccc;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .navigation-wrap a:last-child {
+    margin-right: 0;
+  }
+  .navigation-wrap a:hover {
+    opacity: 0.8;
+  }
+
+
+
+/******** Table of Content Styles ***********/
+
+.toc { 
+  font-family: $font-standard;
+  line-height: 2rem;
+}
+
+
+/******** Settings Pop Out ***********/
+
+.settings-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.settings-switch p {
+  padding-right: 20px;
+  font-family: $font-standard;
+  align-self: center;
+  min-width: 150px;
+  margin: 0px !important;
+}
+
+.settings-items{
+  width: 150px;
+}
+
+
+:root {
+  --toggle-light: #96959B;
+  --toggle-dark: #24883F;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* Hide default html checkbox */
+.switch input {
+  opacity: 0;
+}
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle-dark);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 32px;
+  bottom: 5px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: var(--toggle-light);
+}
+
+input:checked + .slider:before {
+  transform: translateX(-24px);
+}
+.slider,
+.round {
+  border-radius: 34px;
+}
+
+.round::before {
+  border-radius: 50%;
+}
+
+input:checked + .round::before {
+  background-color: #ffffff;
+}

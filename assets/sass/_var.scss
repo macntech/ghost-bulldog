@@ -1,23 +1,23 @@
 //Color Sets for light and dark theme
-// Use specific color in SASS like color: var(--color-headline);
 
-$light-color-bg: #ffffff;
+$light-color-bg: #FBF0DA;
 $light-color-primary:#A9A9A9;
 $light-color-secondary: #EEEEEE;
-$light-color-font: #696969;
-$light-color-headline: #000000;
-$light-color-title: #ffffff;
-$light-color-highlight: #359377;
+$light-color-font: #000000;
+$light-color-headline: #0C5476;
+$light-color-title: #761E36;
+$light-color-highlight: #0E4753;
+$light-color-link-hover: #761E36;
 
 
 $dark-color-bg: rgba(33, 33, 33, 1.0);
 $dark-color-primary:#A9A9A9;
 $dark-color-secondary: #696969;
 $dark-color-font: #EEEEEE;
-$dark-color-headline: #000000;
-$dark-color-title: #000000;
-$dark-color-highlight: #359377;
-
+$dark-color-headline: #779699;
+$dark-color-title: #761E36;
+$dark-color-highlight: #699A84;
+$dark-color-link-hover: #761E36;
 
 
 $grey-0:          #EEEEEE; // HTML White Smoke
@@ -39,6 +39,17 @@ $dark:      #343a40;
 }
 
 @font-face{
+  font-family: 'Libre Regular';
+  src: url("../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: 'Libre Bold';
+  src: url("../fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format('truetype');
+}
+
+
+@font-face{
     font-family: 'Merriweather L';
     src: url("../fonts/Merriweather/Merriweather-Light.ttf") format('truetype');
   }
@@ -49,10 +60,33 @@ $dark:      #343a40;
     src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format('truetype');
   }
 
+@font-face{
+    font-family: 'Montserrat B';
+    src: url("../fonts/Montserrat/Montserrat-Black.ttf") format('truetype');
+}
 
-$font-standard: 'Merriweather L';
+@font-face{
+  font-family: 'Montserrat SB';
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: 'Montserrat R';
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format('truetype');
+}
+
+ @font-face{
+    font-family: 'FontAwesome';
+    src: 
+      url("../fonts/webfonts/fa-brands-400.ttf") format('truetype');
+  }
+
+$font-standard: 'Libre Regular'; //Serif Font
+$font-standard-ns: 'Montserrat R'; //Non Serif Font
+$font-title: 'Montserrat B';
+$font-subtitle: 'Montserrat SB';
 $font-headlines: 'Montserrat M';
-
+$font-fontawesome: 'FontAwesome';
 
 $font-size-0: 0.5rem; 
 $font-size-1: 0.75rem; 

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="header">                
+
+                        <div class="header-logo-bar">                                               
+                             
+                            {{#if @site.logo}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}" width="200">
+                            {{else}}
+                                <span class="title">{{@site.title}}</span><br />
+                            {{/if}}
+                            <span class="header-description">{{@site.description}}</span>
+                        </div>
+                                      
+                        {{!-- Navigation  --}}
+                        {{"navigation"}}
+       
+
+                        {{!-- Table of Contents if page = post // Including sticky.js to make TOC sticky if desktop mode--}}
+                        {{#post}}
+                            <hr />  
+                            <div class="toc sticky" data-margin-top="40" data-sticky-for="991"></div>
+                        {{/post}}
+                        {{!-- End TOC  --}}
+
+            </div>
+        </div>
+
+  
