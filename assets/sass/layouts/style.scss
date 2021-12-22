@@ -28,6 +28,19 @@ p {
   text-align: justify;
 }
 
+.gh-post-upgrade-cta-content{
+  background-color: var(--color-title) !important
+}
+
+.bullbutton{
+  background-color: var(--color-button);
+  color: #ffffff;
+  font-family: $font-standard-ns;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+}
 
 /********************* HEADER ************************/
 
@@ -40,7 +53,7 @@ p {
     margin-top:15px;
     font-family: $font-headlines;
     font-weight:200;
-    color: var(--color-title);
+    color: var(--color-font);
     font-size: 1.1rem;
 }
 
@@ -60,7 +73,6 @@ p {
 .subtitle {
   font-family: $font-subtitle;
   line-height: 2.5rem;
-  color: var(--color-title);
   letter-spacing: 1px;
   font-size: 1.5rem;
 }

@@ -15,11 +15,13 @@
                                       
                         {{!-- Navigation  --}}
                         {{"navigation"}}
-       
+                        
+                        {{^is "index"}}
+                             <hr />  
+                        {{/is}}
 
                         {{!-- Table of Contents if page = post // Including sticky.js to make TOC sticky if desktop mode--}}
                         {{#post}}
-                            <hr />  
                             <div class="toc sticky" data-margin-top="40" data-sticky-for="991"></div>
                         {{/post}}
                         {{!-- End TOC  --}}

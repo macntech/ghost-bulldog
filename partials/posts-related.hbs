@@ -1,0 +1,30 @@
+<h4>Related posts</h4>
+{{#get "posts" limit="4" filter="id:-{{id}}+tag:{{primary_tag.slug}}" include="tags" as |related|}}
+    
+<div class="splide">
+  <div class="splide__track">
+		<ul class="splide__list">
+			{{#foreach related}}
+            <li class="splide__slide">
+              <div class="post-related-card">
+                    <a href="{{url}}">{{title}}</a>
+                    <!--<img src="{{img_url feature_image}}">-->
+                </div>
+            </li>
+            {{/foreach}} 
+		</ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide', {
+        type   : 'loop',
+        perPage: 3,
+        cover: true,
+    });
+    splide.mount();
+  } );
+</script>
+
+{{/get}}

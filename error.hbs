@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{@site.locale}}">
+
+    <head>
+        {{!-- SCRIPTS AND CSS --}} 
+        {{> "head"}}
+    </head>
+
+    <body data-theme="light line-numbers">
+    
+    <div id="main-content container-fluid boxed-layout" data-barba="wrapper"> 
+
+        {{!-- Include Header with Navigation and Title--}} 
+        {{> "header"}}
+        
+       
+        
+        <div class="posts">
+
+        <h1>Oooops...</h1>  
+        <p>It seems an {{statusCode}} Error occured...</p>
+        <p>What happened: {{message}}<br />
+        <br /></p>
+        <a href="{{@site.url}}"><button class="bullbutton">Guide me home</button></a>
+        </div>
+
+      
+    
+    </div>
+    {{> "footer"}}
+    {{!-- Dynamic footer content from code injection etc before scripts to use injected code--}}
+    {{ghost_foot}}
+
+
+    {{> "modals"}}
+    {{!-- JAVASCRIPT --}} 
+    {{> "scripts"}}
+    
+    </body>
+</html>

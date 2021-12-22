@@ -1,12 +1,21 @@
+  {{!-- SCRIPTS 
+  *
+  * This file will render before the closing body tag on each page 
+  * AFTER the Ghost footer injection
+  *
+   --}}
+   
+   
     <script src="{{asset "js/jquery.min.js"}}"></script>
     <script src="{{asset "js/popper.min.js"}}"></script>
     <script src="{{asset "js/bootstrap.min.js"}}"></script>
     <script src="{{asset "js/scripts.js"}}"></script>
     <script src="{{asset "js/sticky.min.js"}}"></script>
     <script src="{{asset "js/prism.js"}}"></script>
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
-
+    <script src="{{asset "js/cookieconsent.min.js"}}"></script>
+    <script src="{{asset "js/micromodal.min.js"}}"></script>
+    <script src="{{asset "js/splide.min.js"}}"></script>
+    
 
  {{!-- Modal for Settings --}}
 <script>
@@ -49,7 +58,53 @@ button.addEventListener('click', function(){
 <script>
         var bodyString = '';
         $.each(projects, function(key, project) {
-            bodyString += ('<div class="row mt-2 border-bottom"><div class="col-md-4 mb-2"><div class="index-post-meta"><i class="post-date">['+project.name+']</i></div></div><div class="col-md-8 mb-2"><h4><a href="'+project.url+'" target="_blank" class="link-dark">'+project.description+'</a></h4></div></div>')
+            bodyString += ('<div class="row mt-2 border-bottom"><div class="col-md-4 mb-2"><div class="index-post-meta"><i class="post-date">['+project.name+']</i></div></div><div class="col-md-8 mb-2"><h4><a href="'+project.url+'" target="_blank">'+project.description+'</a></h4></div></div>')
             });
         $('.projectlist').html(bodyString);
 </script>
+
+
+  {{!-- Load Cookie --}}
+  <script>
+
+    if (cookies){
+        
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#761e36",
+              "text": "#ffffff"
+            },
+            "button": {
+              "background": "#fdea9d",
+              "text": "#000000"
+            }
+          },
+          "showLink": false,
+          "position": "bottom-left",
+          "content": {
+            "message": cookietext,
+            "dismiss": cookiebutton
+          }
+        });
+    }
+  </script>
+
+
+  {{!-- Matomo --}}
+        <script type="text/javascript">
+        //Only if Matomo was enabled
+        if(matomo){
+            var _paq = window._paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u = matomoserver;
+                var s = matomoid;
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', s]);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+        }
+        </script>

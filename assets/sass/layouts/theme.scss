@@ -4,9 +4,13 @@
     --color-primary: #{$light-color-primary};
     --color-secondary: #{$light-color-secondary};
     --color-font: #{$light-color-font};
+    --color-title: #{$light-color-title};
     --color-headline: #{$light-color-headline};
-    --color-highlight: #{$light-color-highlight};
+    --color-headline-link: #{$light-color-headline-link};
+    --color-link: #{$light-color-link};
     --color-link-hover: #{$light-color-link-hover};
+    --color-button: #{$light-color-button};
+    --color-comment: #{$light-color-comment};
 }
 
 @mixin dark {
@@ -15,9 +19,13 @@
     --color-primary: #{$dark-color-primary};
     --color-secondary: #{$dark-color-secondary};
     --color-font: #{$dark-color-font};
+    --color-title: #{$dark-color-title};
     --color-headline: #{$dark-color-headline};
-    --color-highlight: #{$dark-color-highlight};
-    --color-link-hover: #{$dark-color-highlight};
+    --color-headline-link: #{$dark-color-headline-link};
+    --color-link: #{$dark-color-link};
+    --color-link-hover: #{$dark-color-link-hover};
+    --color-button: #{$dark-color-button};
+    --color-comment: #{$dark-color-comment};
 }
 
 //If auto we always use light theme

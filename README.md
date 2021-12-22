@@ -5,13 +5,14 @@ A bootstrap based, clean and simple Ghost theme for bloggers with a british char
 
 <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>  <img alt="SASS" src="https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white"/> <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"/> <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="jQuery" src="https://img.shields.io/badge/jquery-%230769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white"/> <img alt="Ko-Fi" src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" />
 
-Bulldog includes many features build in the theme and ready for use. Some highlights are text-size adjustments, build-in syntax highlighter with Prism.JS including all languages, line numbers and clipboard function as well as newsletter support and build-in utterances comments. 
+Bulldog includes many features build in the theme and ready to use. Some highlights are auto dark mode, text-size adjustments, build-in syntax highlighter with Prism.JS including all languages, line numbers and clipboard function as well as build-in utterances comments. offoo
 
 - [x] Responsive Bootstrap Design
 - [x] Dark Mode (manual and auto)
 - [x] Post Tag Cloud
 - [x] Project List
-- [x] Local Font Awesome Icons
+- [x] Font Awesome Icons
+- [x] Local included JS and CSS Libraries
 - [x] Utterranc.es and Cusdis Comments
 - [x] Code Highlighter and Clipboard with PRISM JS
 - [x] Ko-Fi Implementation
@@ -54,10 +55,12 @@ The theme has a build in SASS structure and provides you the ability to modify s
 If you do any modifications to the theme you need to re-build the CSS file. SASS could be compiled with the cmd: "sass assets/sass/import.scss assets/css/main.css"
 
 ### :cookie: Cookies 
-If you use cookies in your theme (like with Matomo, theme switcher etc.) you may want to inform your visitors about this. BULLDOG uses the famous cookieconsent javascript plugin to manage your cookie banner. The banner is enabled by default but you can disable it in your Ghost code injection. 
+If you use cookies in your theme (like with Matomo, theme switcher etc.) you may want to inform your visitors about this. BULLDOG uses the famous cookieconsent javascript plugin to manage your cookie banner. You can enable and configure the banner via the code injection.
 
 ```javascript
 var cookies = true;
+var cookietext = "This is a text";
+var cookiebutton = "Confirm";
 ```
 
 ### :crystal_ball: Comments
@@ -74,7 +77,7 @@ var projects = [
   		{
     		type: 'javascript',
     		name: 'test',
-            description: 'This is a test project',
+        	description: 'This is a test project',
     		url: 'https://macn.tech'
   		}
 ];

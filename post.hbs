@@ -22,18 +22,23 @@
 </section>
 
 <section class="post-footer">
-<hr>
+  <hr>
   <div class="post-footer-tags">
-      {{tags prefix="Categories: "}}
+    <h4>Categories</h4>
+      {{tags}}
   </div>
+  <hr>
   <div class="post-footer-socials">
-    {{> socialshare}}
+    {{> posts-social}}
   </div>
-<hr>
-  <div class="post-footer-newsletter">
-
+  <hr>
+  <div class="post-footer-related">
+    {{> posts-related}}
   </div>
-
+  <hr>
+  <div class="post-footer-comments">
+    {{> posts-comments}}
+  </div>
 </section>
 
 

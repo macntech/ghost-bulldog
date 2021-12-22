@@ -1,25 +1,42 @@
 //Color Sets for light and dark theme
-
 $light-color-bg: #FBF0DA;
 $light-color-primary:#A9A9A9;
 $light-color-secondary: #EEEEEE;
+
 $light-color-font: #000000;
-$light-color-headline: #0C5476;
+
 $light-color-title: #761E36;
-$light-color-highlight: #0E4753;
+$light-color-headline: #0C5476;
+$light-color-headline-link: #0C5476;
+
+$light-color-link: #0E4753;
 $light-color-link-hover: #761E36;
 
+$light-color-button: #0E4753;
 
+$light-color-comment: #F5F2F0;
+
+//DARK
 $dark-color-bg: rgba(33, 33, 33, 1.0);
 $dark-color-primary:#A9A9A9;
 $dark-color-secondary: #696969;
+
 $dark-color-font: #EEEEEE;
-$dark-color-headline: #779699;
+
 $dark-color-title: #761E36;
-$dark-color-highlight: #699A84;
+$dark-color-headline: #FBF0DA;
+$dark-color-headline-link: #FBF0DA;
+
+$dark-color-link: #699A84;
 $dark-color-link-hover: #761E36;
 
+$dark-color-button: #761E36;
 
+$dark-color-comment: #A6A7A1;
+
+
+
+//GENERAL COLORS
 $grey-0:          #EEEEEE; // HTML White Smoke
 $grey-1:          #D3D3D3; // HTML Light Grey
 $grey-2:          #A9A9A9; // HTML Dark Grey

@@ -11172,16 +11172,29 @@ h1, .h1 {
   font-weight: 400;
   text-align: left;
   font-family: "Montserrat M";
-  color: var(--color-title);
+  color: var(--color-headline);
+}
+
+h2, .h2,
+h3, .h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+h6,
+.h6, .h6 a {
+  color: var(--color-headline-link);
 }
 
 h1 > a, .h1 > a,
@@ -11223,7 +11236,7 @@ h6, .h6 {
 }
 
 a {
-  color: var(--color-highlight);
+  color: var(--color-link);
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -11233,7 +11246,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-ahover) !important;
+  color: var(--color-link-hover) !important;
 }
 
 /*
@@ -11464,8 +11477,41 @@ input:checked + .round::before {
   margin-top: -1rem;
 }
 
-.post-footer-tags, .post-footer-socials, .post-footer-newsletter {
+.post-footer-tags, .post-footer-socials, .post-footer-comments {
   margin-bottom: 10px;
+}
+
+.timeline-header, .avatar {
+  display: none !important;
+}
+
+.comment {
+  background-color: var(--color-comment) !important;
+}
+
+/********************* Related Posts ************************/
+.splide {
+  height: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.post-related-card {
+  height: 130px;
+  background-color: var(--color-comment);
+  padding-top: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  align-content: center;
+  overflow-wrap: break-word;
+  /* text-align: center; */
+}
+
+.post-related-card img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
 body[data-theme=auto] {
@@ -11474,9 +11520,13 @@ body[data-theme=auto] {
   --color-primary: #A9A9A9;
   --color-secondary: #EEEEEE;
   --color-font: #000000;
+  --color-title: #761E36;
   --color-headline: #0C5476;
-  --color-highlight: #0E4753;
+  --color-headline-link: #0C5476;
+  --color-link: #0E4753;
   --color-link-hover: #761E36;
+  --color-button: #0E4753;
+  --color-comment: #F5F2F0;
 }
 @media (prefers-color-scheme: dark) {
   body[data-theme=auto] {
@@ -11485,9 +11535,13 @@ body[data-theme=auto] {
     --color-primary: #A9A9A9;
     --color-secondary: #696969;
     --color-font: #EEEEEE;
-    --color-headline: #779699;
-    --color-highlight: #699A84;
-    --color-link-hover: #699A84;
+    --color-title: #761E36;
+    --color-headline: #FBF0DA;
+    --color-headline-link: #FBF0DA;
+    --color-link: #699A84;
+    --color-link-hover: #761E36;
+    --color-button: #761E36;
+    --color-comment: #A6A7A1;
   }
 }
 
@@ -11497,9 +11551,13 @@ body[data-theme=light] {
   --color-primary: #A9A9A9;
   --color-secondary: #EEEEEE;
   --color-font: #000000;
+  --color-title: #761E36;
   --color-headline: #0C5476;
-  --color-highlight: #0E4753;
+  --color-headline-link: #0C5476;
+  --color-link: #0E4753;
   --color-link-hover: #761E36;
+  --color-button: #0E4753;
+  --color-comment: #F5F2F0;
 }
 
 body[data-theme=dark] {
@@ -11508,9 +11566,13 @@ body[data-theme=dark] {
   --color-primary: #A9A9A9;
   --color-secondary: #696969;
   --color-font: #EEEEEE;
-  --color-headline: #779699;
-  --color-highlight: #699A84;
-  --color-link-hover: #699A84;
+  --color-title: #761E36;
+  --color-headline: #FBF0DA;
+  --color-headline-link: #FBF0DA;
+  --color-link: #699A84;
+  --color-link-hover: #761E36;
+  --color-button: #761E36;
+  --color-comment: #A6A7A1;
 }
 
 /********************* GENERAL STYLES ************************/
@@ -11542,6 +11604,20 @@ p {
   text-align: justify;
 }
 
+.gh-post-upgrade-cta-content {
+  background-color: var(--color-title) !important;
+}
+
+.bullbutton {
+  background-color: var(--color-button);
+  color: #ffffff;
+  font-family: "Montserrat R";
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+}
+
 /********************* HEADER ************************/
 .header-logo-bar {
   margin-bottom: 20px;
@@ -11552,7 +11628,7 @@ p {
   margin-top: 15px;
   font-family: "Montserrat M";
   font-weight: 200;
-  color: var(--color-title);
+  color: var(--color-font);
   font-size: 1.1rem;
 }
 
@@ -11572,7 +11648,6 @@ p {
 .subtitle {
   font-family: "Montserrat SB";
   line-height: 2.5rem;
-  color: var(--color-title);
   letter-spacing: 1px;
   font-size: 1.5rem;
 }
