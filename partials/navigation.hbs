@@ -10,16 +10,30 @@
 {{else}}
    
     {{!--  Main Navigation --}}
-    <div class="main-menu">
-         <nav>                  
+    <div class="main-menu container">
+         <nav class="row">
+            <div class="col-md-11">                 
             <ul class="menu-list">
                     {{#foreach navigation}}
                         <li><a href="{{url absolute="true"}}">{{label}}</a></li>
                     {{/foreach}}
-              
-                        <li><a href="#" class="settings" data-micromodal-trigger="modal-1"><i class="fas fa-sliders-h"></i></a></li>
+                                          
               </ul>
-              
+            </div>
+
+           {{!-- Theme Switch --}}
+            <div class="settings-switch col-md-1">
+               <span class="settings-items">
+                 <label class="switch">
+                    <input id="theme-switch" type="checkbox">
+                    <span class="slider">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </span>
+                 </label>
+               </span> 
+            </div>
+             
         </nav>
     </div>
 {{/if}}

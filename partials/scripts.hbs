@@ -13,29 +13,8 @@
     <script src="{{asset "js/sticky.min.js"}}"></script>
     <script src="{{asset "js/prism.js"}}"></script>
     <script src="{{asset "js/cookieconsent.min.js"}}"></script>
-    <script src="{{asset "js/micromodal.min.js"}}"></script>
     <script src="{{asset "js/splide.min.js"}}"></script>
     
-
- {{!-- Modal for Settings --}}
-<script>
-
-MicroModal.init({
-    openTrigger: 'data-custom-open', // [3]
-    closeTrigger: 'data-custom-close', // [4]
-    disableScroll: true, // [5]
-    disableFocus: false, // [6]
-    awaitCloseAnimation: false, // [7]
-    debugMode: true // [8]
-  });
-
-var button = document.querySelector('.settings');
-button.addEventListener('click', function(){
-  MicroModal.show('modal-1');    
-});
-
-</script>
-
 
     {{!-- Theme --}}
 <script>

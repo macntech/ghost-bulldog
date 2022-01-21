@@ -50,46 +50,36 @@ $dark:      #343a40;
 
 
 //FONTS
-@font-face{
-  font-family: 'Merriweather R';
-  src: url("../fonts/Merriweather/Merriweather-Regular.ttf") format('truetype');
-}
 
-@font-face{
-  font-family: 'Libre Regular';
-  src: url("../fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf") format('truetype');
-}
-
-@font-face{
-  font-family: 'Libre Bold';
-  src: url("../fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf") format('truetype');
-}
-
-
-@font-face{
-    font-family: 'Merriweather L';
-    src: url("../fonts/Merriweather/Merriweather-Light.ttf") format('truetype');
-  }
-
-
-@font-face{
-    font-family: 'Montserrat M';
-    src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format('truetype');
-  }
-
-@font-face{
-    font-family: 'Montserrat B';
-    src: url("../fonts/Montserrat/Montserrat-Black.ttf") format('truetype');
-}
-
-@font-face{
-  font-family: 'Montserrat SB';
-  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format('truetype');
-}
 
 @font-face{
   font-family: 'Montserrat R';
   src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: 'Insconsolata R';
+  src: url("../fonts/Inconsolata/Inconsolata-Regular.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: 'JetBrains R';
+  src: url("../fonts/JetBrains/JetBrainsMono-Regular.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: 'JetBrains M';
+  src: url("../fonts/JetBrains/JetBrainsMono-Medium.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: 'JetBrains SB';
+  src: url("../fonts/JetBrains/JetBrainsMono-SemiBold.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: 'JetBrains B';
+  src: url("../fonts/JetBrains/JetBrainsMono-Bold.ttf") format('truetype');
 }
 
  @font-face{
@@ -98,11 +88,11 @@ $dark:      #343a40;
       url("../fonts/webfonts/fa-brands-400.ttf") format('truetype');
   }
 
-$font-standard: 'Libre Regular'; //Serif Font
-$font-standard-ns: 'Montserrat R'; //Non Serif Font
-$font-title: 'Montserrat B';
-$font-subtitle: 'Montserrat SB';
-$font-headlines: 'Montserrat M';
+$font-standard: 'Montserrat R'; //Serif Font
+$font-standard-ns: 'JetBrains R'; //Non Serif Font
+$font-headlines: 'JetBrains M'; 
+$font-title: 'JetBrains B';
+$font-subtitle: 'JetBrains SB';
 $font-fontawesome: 'FontAwesome';
 
 $font-size-0: 0.5rem; 
